@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Join Trade With Munaaf — free stock market education community on Telegram.">
+<title>TRADE WITH MUNAAF | Official Community</title>
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #f6eef3;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(230, 168, 96, 0.13) 0%, transparent 42%),
+    radial-gradient(circle at 88% 88%, rgba(157, 45, 92, 0.20) 0%, transparent 48%),
+    #1B0E17;
+}
+
+.wrapper { width: 100%; max-width: 420px; }
+
+.card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(230, 168, 96, 0.22);
+  border-radius: 24px;
+  padding: 28px 22px 24px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 20px; right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230,168,96,0.6), transparent);
+}
+
+.avatar-ring {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  padding: 3px;
+  background: conic-gradient(from 180deg, #E6A860, #9D2D5C, #E6A860);
+}
+.avatar-ring .inner {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  padding: 3px;
+  background: #1B0E17;
+}
+.avatar-ring img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: #2c1522;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #E6A860;
+  margin-bottom: 6px;
+}
+h1 {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.subtitle { font-size: 12.5px; color: #dcb3c4; margin-bottom: 20px; }
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(230, 168, 96, 0.15);
+  border-bottom: 1px solid rgba(230, 168, 96, 0.15);
+}
+.stat-row .s { flex: 1; text-align: center; }
+.stat-row .s strong { display: block; font-size: 15px; font-weight: 900; color: #E6A860; }
+.stat-row .s span { font-size: 9.5px; color: #cf9cb2; }
+.stat-row .divider { width: 1px; height: 28px; background: rgba(230, 168, 96, 0.2); }
+
+.checklist { display: flex; flex-direction: column; gap: 11px; text-align: left; margin-bottom: 22px; }
+.check-item { display: flex; align-items: flex-start; gap: 9px; font-size: 12.5px; color: #f0dde6; }
+.check-item i { color: #E6A860; font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+
+/* Ticket-stub shaped CTA — two notch cutouts + dashed divider, like a boarding pass */
+.cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #9D2D5C 0%, #6E1F42 100%);
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  border: 1px solid rgba(230,168,96,0.35);
+  transition: transform 0.15s ease, filter 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 4px;
+  overflow: visible;
+  min-height: 68px;
+}
+/* notch cutouts top & bottom of the divider, giving the ticket-stub look */
+.cta-btn::before,
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  left: 86px;
+  width: 16px; height: 16px;
+  background: #1B0E17;
+  border-radius: 50%;
+  z-index: 2;
+}
+.cta-btn::before { top: -8px; }
+.cta-btn::after { bottom: -8px; }
+.cta-btn:active { transform: scale(0.97); }
+.cta-btn:hover { filter: brightness(1.08); }
+
+.cta-icon-badge {
+  position: relative;
+  width: 86px;
+  min-width: 86px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  border-right: 1px dashed rgba(255,255,255,0.35);
+}
+.cta-icon-badge .ring {
+  position: relative;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+}
+.cta-icon-badge .ring::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+.cta-icon-badge i { font-size: 18px; position: relative; z-index: 1; }
+@keyframes pulse-ring {
+  0%   { transform: scale(0.85); opacity: 0.9; }
+  70%  { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-icon-badge .ring::before { animation: none; }
+}
+
+.cta-text-wrap { position: relative; text-align: left; padding: 14px 18px; }
+.cta-text-wrap .main-txt { display: block; font-size: 14.5px; font-weight: 900; line-height: 1.25; color: #ffffff; }
+.cta-text-wrap .sub-txt { display: block; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.75); margin-top: 2px; }
+
+.disclaimer {
+  margin-top: 18px;
+  font-size: 9.5px;
+  line-height: 1.65;
+  color: #8a6577;
+  text-align: center;
+  padding: 14px 4px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+</style>
+
+</head>
+<body>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+// 🔴 Pixel ID
+fbq('init', '28058895200438534');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=28058895200438534&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<div class="wrapper">
+  <div class="card">
+
+    <div class="avatar-ring">
+      <div class="inner">
+        <img src="profile.png" alt="Trade With Munaaf" width="96" height="96" decoding="async" fetchpriority="high">
+      </div>
+    </div>
+
+    <div class="eyebrow">Verified Educational Community</div>
+    <h1>TRADE WITH MUNAAF</h1>
+    <p class="subtitle">Stock Market &amp; Trading Education</p>
+
+    <div class="stat-row">
+      <div class="s"><strong>Daily</strong><span>UPDATES</span></div>
+      <div class="divider"></div>
+      <div class="s"><strong>Free</strong><span>ACCESS</span></div>
+      <div class="divider"></div>
+      <div class="s"><strong>Simple</strong><span>LEARNING</span></div>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item"><i class="fas fa-check-circle"></i> Daily chart patterns and market insights</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> A practical understanding of risk management</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> Simple explanations built for beginners</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> Full community support — for education only</div>
+    </div>
+
+    <a class="cta-btn" id="telegramBtn" href="https://t.me/+D3CU46uTzh9kNzA1" rel="noopener noreferrer">
+      <span class="cta-icon-badge"><span class="ring"><i class="fab fa-telegram-plane"></i></span></span>
+      <span class="cta-text-wrap">
+        <span class="main-txt">Join Free Telegram Community</span>
+        <span class="sub-txt">Instant access • 100% free</span>
+      </span>
+    </a>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This platform is for educational and informational purposes only. We do not provide financial advice, and there is no guarantee of profit. Stock market investments carry risk — please do your own research or consult a SEBI-registered advisor before investing.
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  // Telegram destination
+  var telegramLink = "https://t.me/+D3CU46uTzh9kNzA1";
+  var telegramBtn = document.getElementById("telegramBtn");
+
+  var pageLoadTime = Date.now();
+  var hasRealInteraction = false;
+  var fired = false;
+
+  // --- Fake-click / bot mitigation ---
+  // 1) Only count a click if the visitor genuinely touched/scrolled/moved the mouse first.
+  ['touchstart','mousemove','scroll','pointerdown'].forEach(function(evt){
+    window.addEventListener(evt, function(){ hasRealInteraction = true; }, {once:true, passive:true});
+  });
+
+  // 2) Ignore clicks that fire suspiciously fast after page load (typical bot/click-farm signature).
+  var MIN_DWELL_MS = 800;
+
+  // 3) Fire the Subscribe conversion at most once per browser session, no matter how many times tapped.
+  function alreadyFiredThisSession(){
+    try { return sessionStorage.getItem('munaaf_subscribe_fired') === '1'; }
+    catch(e){ return false; }
+  }
+  function markFired(){
+    try { sessionStorage.setItem('munaaf_subscribe_fired','1'); } catch(e){}
+  }
+
+  // 4) Basic automation signal (headless/automated browsers commonly expose this).
+  function looksAutomated(){
+    return !!(navigator.webdriver);
+  }
+
+  telegramBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    if (!fired) {
+      var dwell = Date.now() - pageLoadTime;
+      var suspicious = looksAutomated() || dwell < MIN_DWELL_MS || !hasRealInteraction;
+
+      if (!suspicious && !alreadyFiredThisSession() && window.fbq) {
+        fbq('track', 'Subscribe',
+          { content_name: 'Trade With Munaaf Telegram Join' },
+          { eventID: 'munaaf_subscribe_' + Date.now() }
+        );
+        markFired();
+      }
+      fired = true;
+    }
+
+    // Real visitor always reaches Telegram — suspicious clicks are just excluded from the pixel count.
+    setTimeout(function(){ window.location.href = telegramLink; }, 200);
+  });
+})();
+</script>
+
+</body>
+</html>
